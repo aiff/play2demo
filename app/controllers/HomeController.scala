@@ -3,7 +3,7 @@ package controllers
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
   def index() = Action {
-    Ok(views.html.index())..
+    Ok(views.html.index())
   }
   def  tutorial(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
     // Ok(views.html.index())
