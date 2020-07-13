@@ -6,7 +6,7 @@ Please see the documentation at:
 
 * <https://www.playframework.com/documentation/latest/ScalaComet>
 
-## Running
+## Running 覆盖后 直接运行sbt 命令 调出窗口
 
 Run the application:
 
