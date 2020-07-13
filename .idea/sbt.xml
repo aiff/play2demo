@@ -4,5 +4,20 @@
     <option name="customLauncherPath" value="$PROJECT_DIR$/../../hello-scala/repo.properties" />
     <option name="customVMEnabled" value="true" />
     <option name="customVMPath" value="/usr/bin/java" />
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../play2demo1" />
+        <option name="jdk" value="1.8" />
+        <option name="resolveSbtClassifiers" value="true" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../../playdemo/playdemo" />
+        <option name="jdk" value="1.8" />
+        <option name="resolveSbtClassifiers" value="true" />
+      </SbtProjectSettings>
+    </option>
   </component>
 </project>
