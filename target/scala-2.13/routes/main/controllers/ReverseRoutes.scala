@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/admin/Downloads/new2/play2demo/conf/routes
-// @DATE:Fri Jul 17 14:22:45 CST 2020
+// @DATE:Fri Jul 17 15:13:56 CST 2020
 
 import play.api.mvc.Call
 
@@ -21,6 +21,12 @@ package controllers {
     def index(): Call = {
       
       Call("GET", _prefix)
+    }
+  
+    // @LINE:17
+    def listWidgets(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "widgets")
     }
   
   }

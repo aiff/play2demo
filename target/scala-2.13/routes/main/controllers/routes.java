@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/admin/Downloads/new2/play2demo/conf/routes
-// @DATE:Fri Jul 17 14:22:45 CST 2020
+// @DATE:Fri Jul 17 15:13:56 CST 2020
 
 package controllers;
 

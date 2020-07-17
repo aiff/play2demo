@@ -1,0 +1,24 @@
+@(widgets: Seq[Widget])
+
+@main {
+
+<h1>Widgets</h1>
+<table>
+    <thead>
+    <tr><th>Name</th><th>Price</th>
+    </thead>
+    <tbody>
+    @for(w <- widgets) {
+    <tr><td>@w.name</td><td>@w.price</td>
+        }
+    </tbody>
+</table>
+<form method="POST" action="/widgets">
+
+    <h2>TODO form fields</h2>
+
+    <button type="submit">Create widget</button>
+
+</form>
+
+}

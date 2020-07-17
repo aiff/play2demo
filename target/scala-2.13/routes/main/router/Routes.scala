@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/admin/Downloads/new2/play2demo/conf/routes
-// @DATE:Fri Jul 17 14:22:45 CST 2020
+// @DATE:Fri Jul 17 15:13:56 CST 2020
 
 package router
 
@@ -53,6 +53,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """scala/eventSource""", """controllers.ScalaEventSourceController.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """scala/eventSource/liveClock""", """controllers.ScalaEventSourceController.streamClock()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """widgets""", """controllers.HomeController.listWidgets()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -168,6 +169,24 @@ class Routes(
     )
   )
 
+  // @LINE:17
+  private[this] lazy val controllers_HomeController_listWidgets6_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("widgets")))
+  )
+  private[this] lazy val controllers_HomeController_listWidgets6_invoker = createInvoker(
+    HomeController_2.listWidgets(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "listWidgets",
+      Nil,
+      "GET",
+      this.prefix + """widgets""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -205,6 +224,12 @@ class Routes(
     case controllers_Assets_at5_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at5_invoker.call(Assets_1.at(path, file))
+      }
+  
+    // @LINE:17
+    case controllers_HomeController_listWidgets6_route(params@_) =>
+      call { 
+        controllers_HomeController_listWidgets6_invoker.call(HomeController_2.listWidgets())
       }
   }
 }

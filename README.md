@@ -1,7 +1,6 @@
 # play-streaming-scala
 
-This is an example Play template that demonstrates Streaming with Server Sent Events or Comet, using Akka Streams.
-
+This is an example Play template that demo listwiget
 Please see the documentation at:
 
 * <https://www.playframework.com/documentation/latest/ScalaComet>
